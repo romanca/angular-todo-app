@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    margin: 5px;
+}
+
+.card-left {
+    margin: 5px;
+    width: 25%;
+}
+
+.card-right {
+    margin: 5px;
+    width: 75%;
+}

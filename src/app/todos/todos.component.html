@@ -1,8 +1,10 @@
-<app-todo-item *ngFor="let todo of todos" [todo]="todo" (remove)="deleteTodo($event)">
-</app-todo-item>
-<div>
-    <input #todoName />
-    <button (click)="addTodos(todoName.value); todoName.value=''">
-    add
-  </button>
+<div class="container">
+    <app-todo-item *ngFor="let todo of todos" [todo]="todo" (remove)="deleteTodo($event)">
+    </app-todo-item>
+    <div>
+        <input #todoName />
+        <button (click)="addTodos(todoName.value); todoName.value=''">
+      add
+    </button>
+    </div>
 </div>

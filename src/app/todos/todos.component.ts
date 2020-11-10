@@ -38,7 +38,7 @@ export class TodosComponent implements OnInit {
   deleteTodo(todo: Todo): void {
     this.todos = this.todos.filter(i => i !== todo);
     this.todoService.deleteTodo(todo).subscribe();
-  }
+  }w
   
   ngOnInit() {this.getTodos();}
 

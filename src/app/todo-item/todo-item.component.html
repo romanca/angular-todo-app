@@ -1,34 +1,35 @@
-<!-- <div class="todo-item">
-  <div class="todo-item-left">
-    <input type="checkbox" [(ngModel)]="todo.completed" (change)="todoService.doneEdit(todo)">
-    <div *ngIf="!todo.editing; else editingTodo" class="todo-item-label" [ngClass]="{ 'completed' : todo.completed }"
-      (dblclick)="todoService.editTodo(todo)">{{ todo.title }}</div>
-    <ng-template #editingTodo>
-      <input type="text" class="todo-item-edit" [(ngModel)]="todo.title" (blur)="todoService.doneEdit(todo)" (keyup.enter)="todoService.doneEdit(todo)"
-        (keyup.esc)="todoService.cancelEdit(todo)" autofocus>
-    </ng-template>
-  </div>
-  <div class="remove-item" (click)="todoService.deleteTodo(todo.id)">
-    &times;
-  </div>
-</div> -->
-
-<div>
-    <div [hidden]="isShowDiv">
-        <input type="checkbox">
-        <div>
-            <h3 (click)=toggleDisplayDiv()>
-                {{todo.name}}
-            </h3>
-            <button class="btn btn-red" (click)="removeItem()">
-          remove
-         </button>
+<mat-card class="card">
+    <div>
+        <div [hidden]="isShowDiv">
+            <div class="container">
+                <input type="checkbox" class="todo-input">
+                <h3 (click)=toggleDisplayDiv() class="todo-text">
+                    {{todo.name}}
+                </h3>
+                <button (click)="removeItem()" class="todo-button">
+                    <mat-icon>delete</mat-icon>
+                   </button>
+                <button (click)=toggleDisplayDiv() class="todo-button">
+                    <mat-icon >edit</mat-icon>
+                </button>
+            </div>
+        </div>
+        <div [hidden]="!isShowDiv">
+            <input type="checkbox">
+            <!-- <input [(ngModel)]="todo.name" /> -->
+            <!-- <mat-form-field class="example-full-width">
+                <textarea matInput placeholder="Edit task ..." [(ngModel)]="todo.name"></textarea>
+            </mat-form-field> -->
+            <mat-form-field class="example-full-width">
+                <mat-label>Edit task ...</mat-label>
+                <input matInput [(ngModel)]="todo.name">
+            </mat-form-field>
+            <button (click)=toggleDisplayDiv() class="todo-button">            
+                <mat-icon >cancel</mat-icon>
+            </button>
+            <button (click)="saveTodo(todo)" class="todo-button">                    
+                <mat-icon >done</mat-icon>
+            </button>
         </div>
     </div>
-    <div [hidden]="!isShowDiv">
-        <input type="checkbox">
-        <input [(ngModel)]="todo.name" />
-        <button (click)=toggleDisplayDiv()>Cancel</button>
-        <button (click)="saveTodo(todo)">Save</button>
-    </div>
-</div>
+</mat-card>

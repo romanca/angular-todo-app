@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    max-width: 100%;
+}
+
+.card {
+    margin: 6px;
+}
+
+.todo-button {
+    float: right;
+    padding-top: -40px;
+    margin-left: 2px;
+    border: none;
+    background: transparent;
+    color: rgb(161, 158, 158)
+}
+
+.todo-input {
+    color: indigo;
+}
+
+.todo-text {
+    margin-left: 23px;
+    width: 100%;
+    color: rgb(161, 158, 158)
+}
