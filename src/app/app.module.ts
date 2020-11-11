@@ -3,8 +3,7 @@ import { MatCardModule } from '@angular/material/card';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -15,15 +14,11 @@ import { TodoItemComponent } from './todo-item/todo-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { MatInputModule } from '@angular/material/input';
 import { TestComponent } from './test/test.component';
-import { ContainerComponent } from './container/container.component';
- 
-
-
- 
-
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
 
 @NgModule({
   declarations: [
@@ -32,10 +27,9 @@ import { ContainerComponent } from './container/container.component';
     TodoItemComponent,
     HeaderComponent,
     AddTodoComponent,
-    SidebarComponent,
     TestComponent,
-    ContainerComponent,
-  ],
+    BottomBarComponent,
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -47,7 +41,8 @@ import { ContainerComponent } from './container/container.component';
     MatCardModule,
     MatIconModule,
     MatInputModule,
-    
+    MatListModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
