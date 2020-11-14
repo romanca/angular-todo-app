@@ -12,24 +12,18 @@ import { HttpClientModule } from '@angular/common/http'
 import { CommonModule } from "@angular/common";
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './header/header.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 import { MatInputModule } from '@angular/material/input';
-import { TestComponent } from './test/test.component';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
-
+ 
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
     TodoItemComponent,
-    HeaderComponent,
     AddTodoComponent,
-    TestComponent,
-    BottomBarComponent,
-   ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,7 +1,54 @@
-<app-header></app-header>
 <div class="container">
-    <app-sidebar></app-sidebar>
+    <mat-drawer-container class="drawer">
+        <mat-drawer mode="side" opened class="left-side">
+            <div class="drawer-header"></div>
+            <mat-selection-list [multiple]="false" class="link-container">
+                <mat-list-option>
+                    <a routerLink="/login" class="link-route">Login</a>
+                </mat-list-option>
+                <mat-list-option>
+                    <a routerLink="/dashboard" class="link-route">
+                        <mat-icon>dashboard</mat-icon>
+                        <h3>Dashboard</h3>
+                    </a>
+                </mat-list-option>
+                <mat-list-option>
+                    <a routerLink="/dashboard" class="link-route">
+                        <mat-icon>home</mat-icon>
+                        <h3>Home</h3>
+                    </a>
+                </mat-list-option>
+                <mat-list-option>
+                    <a routerLink="/dashboard" class="link-route">
+                        <mat-icon>work</mat-icon>
+                        <h3>Work</h3>
+                    </a>
+                </mat-list-option>
+                <mat-list-option>
+                    <a routerLink="/dashboard" class="link-route">
+                        <mat-icon>shopping_cart</mat-icon>
+                        <h3>Shopping</h3>
+                    </a>
+                </mat-list-option>
+                <mat-list-option>
+                    <a routerLink="/dashboard" class="link-route">
+                        <mat-icon>pool</mat-icon>
+                        <h3>Hobby</h3>
+                    </a>
+                </mat-list-option>
+                <mat-list-option>
+                    <a routerLink="/dashboard" class="link-route">
+                        <mat-icon>school</mat-icon>
+                        <h3>School</h3>
+                    </a>
+                </mat-list-option>
+            </mat-selection-list>
+        </mat-drawer>
+        <mat-drawer-content class="right-side">
+            <div class="wrap">
+                <div class="header"><span>Todo List</span></div>
+                <!-- <router-outlet></router-outlet> -->
+            </div>
+        </mat-drawer-content>
+    </mat-drawer-container>
 </div>
-<app-bottom-bar></app-bottom-bar>
-<!-- <app-todos></app-todos> -->
-<router-outlet></router-outlet>
