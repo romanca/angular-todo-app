@@ -15,17 +15,19 @@
             </div>
         </div>
         <div [hidden]="!isShowDiv">
-            <input type="checkbox">
-            <mat-form-field class="example-full-width">
-                <mat-label>Edit task ...</mat-label>
-                <input matInput [(ngModel)]="todo.name">
-            </mat-form-field>
-            <button (click)=toggleDisplayDiv() class="todo-button">            
-                <mat-icon >cancel</mat-icon>
-            </button>
-            <button (click)="saveTodo(todo)" class="todo-button">                    
-                <mat-icon >done</mat-icon>
-            </button>
+            <div class="container">
+                <input type="checkbox" class="todo-input">
+                <mat-form-field class="todo-text">
+                    <mat-label>Edit task ...</mat-label>
+                    <input matInput [(ngModel)]="todo.name">
+                </mat-form-field>
+                <button (click)=toggleDisplayDiv() class="todo-button">            
+                    <mat-icon >cancel</mat-icon>
+                </button>
+                <button (click)="saveTodo(todo)" class="todo-button">                    
+                    <mat-icon >done</mat-icon>
+                </button>
+            </div>
         </div>
     </div>
 </mat-card>
