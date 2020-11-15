@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
-import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
  
 import { HttpClientModule } from '@angular/common/http'
@@ -16,7 +15,10 @@ import { AddTodoComponent } from './add-todo/add-todo.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
- 
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatIconModule,
     MatInputModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatDatepickerModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
