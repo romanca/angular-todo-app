@@ -5,6 +5,39 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap1 {
+    height: 85%;
+    width: 20%;
+    margin: auto;
+    border-radius: 20px;
+    border: solid 8px #4e342e;
+    opacity: 0.9;
+    background-image: url(../images/green-paper2.jpg);
+    box-shadow: 0 0 0px 1px rgba(255, 255, 255, .4), 0 0 0px 3px #4e342e;
+}
+
+.wrap2 {
+    width: 75%;
+    height: 85%;
+    margin: auto;
+    border-radius: 20px;
+    opacity: 0.9;
+    border: solid 8px #4e342e;
+    background-image: url(../images/paper.jpg);
+    box-shadow: 0 0 0px 1px rgba(255, 255, 255, .4), 0 0 0px 3px #4e342e;
 }
 
 h3 {
@@ -65,16 +98,6 @@ h3 {
 .drawer {
     height: 100%;
     background-image: url(../images/leaves.jpg);
-}
-
-.wrap {
-    width: 75%;
-    height: 85%;
-    margin: 50px auto;
-    border-radius: 20px;
-    border: solid 8px #4e342e;
-    background-image: url(../images/paper.jpg);
-    box-shadow: 0 0 0px 1px rgba(255, 255, 255, .4), 0 0 0px 3px #4e342e;
 }
 
 .header {
