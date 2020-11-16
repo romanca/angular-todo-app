@@ -1,9 +1,16 @@
-<div>
-    <div>
-        <input #todoName />
-        <button (click)="addTodos(todoName.value); todoName.value=''">
-  add
-</button>
+<div class="form">
+    <div class="add-todo">
+        <div class="input">
+            <mat-form-field>
+                <mat-label>Add task ...</mat-label>
+                <input matInput placeholder="Add task ..." #todoName>
+            </mat-form-field>
+        </div>
+        <div class="button">
+            <button mat-mini-fab color="primary" (click)="addTodos(todoName.value); todoName.value=''">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
     </div>
     <app-todo-item *ngFor="let todo of todos" [todo]="todo" (remove)="deleteTodo($event)">
     </app-todo-item>

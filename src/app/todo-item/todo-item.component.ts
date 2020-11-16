@@ -14,8 +14,7 @@ export class TodoItemComponent   {
 
   isShowDiv = false;
   todos: Todo[];
-  date = new FormControl(new Date());
-  serializedDate = new FormControl((new Date()).toISOString());
+ 
 
   constructor(private todoService: TodoService) {}
    
