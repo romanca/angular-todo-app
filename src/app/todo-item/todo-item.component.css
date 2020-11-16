@@ -2,20 +2,10 @@
     display: flex;
 }
 
-.todo-input {
-    margin-top: 8px;
-}
-
-
-/* mat-form-field {
-    margin-right: 12px;
-} */
-
 .card {
     height: 85%;
     margin: 6px;
-    background: whitesmoke;
-    box-shadow: 4px 6px 18px grey;
+    background: #efebe9;
 }
 
 .todo-button {
@@ -31,5 +21,6 @@
     margin-left: 23px;
     width: 100%;
     color: rgb(161, 158, 158);
-    font-size: 20px;
+    font-size: 18px;
+    background-color: teal;
 }
