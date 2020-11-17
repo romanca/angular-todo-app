@@ -1,8 +1,7 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component,Input, EventEmitter, Output } from '@angular/core';
 import { Todo } from '../todo';
 import { TodoService } from '../todo.service';
-import { FormControl } from '@angular/forms';
-
+ 
 @Component({
   selector: 'app-todo-item',
   templateUrl: './todo-item.component.html',
@@ -33,14 +32,6 @@ export class TodoItemComponent   {
 
   removeItem() {
     this.remove.emit(this.todo);
-  }
-
-  // deleteTodo(todo: Todo): void {
-  //   this.todos = this.todos.filter(i => i !== todo);
-  //   this.todoService.deleteTodo(todo).subscribe();
-  // }
+  } 
 }
-// deleteHero(hero: Hero): void {
-//   this.heroes = this.heroes.filter(i => i !== hero);
-//   this.heroService.deleteHero(hero).subscribe();
-// }
+ 
