@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Todo } from '../todo';
 import { TodoService } from '../todo.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-todo-item',
@@ -13,8 +14,7 @@ export class TodoItemComponent   {
 
   isShowDiv = false;
   todos: Todo[];
-  
-
+ 
 
   constructor(private todoService: TodoService) {}
    

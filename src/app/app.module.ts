@@ -5,25 +5,28 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
-import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
  
 import { HttpClientModule } from '@angular/common/http'
 import { CommonModule } from "@angular/common";
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AddTodoComponent } from './add-todo/add-todo.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+
  
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
     TodoItemComponent,
-    AddTodoComponent,
-    ],
+     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -36,7 +39,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatIconModule,
     MatInputModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatDatepickerModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
